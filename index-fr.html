@@ -33,6 +33,36 @@
       <p>
         <i>Comment le réparer:</i> Il faut revoir vos données car ces valeurs ne sont pas plausibles - c'est-à-dire vérifier les erreurs de saisie de données, vérifier les calculs des sources précédentes, etc.
       </p>
+
+      <!-- VALIDATION_ANC_CLIENT_NUMBERS2 -->
+      <p class="error">
+        Le nombre de personnes déjà sous ART est supérieur au nombre de personnes positives (celles dont la séropositivité est connue + celles qui ont été testées positives)
+      </p>
+
+      <p>
+        <i>Qu'est-ce que ça veut dire ?</i>
+
+        Dans un ou plus de ligne des données, le nombre de gens sur ART (<code>ancrt_already_art</code>) est supérieure à le nombre qui sont sérpopositif (<code>ancrt_known_pos</code> + <code>ancrt_test_pos</code>),  ce qui n'est pas plausible et ne peut pas être utilisé par naomi.
+      </p>
+
+      <p>
+        <i>Comment le réparer:</i>
+        Il faut revoir vos données pour decouvrir d'où viennent ces chiffres et puis les corriger.
+      </p>
+
+      <!-- VALIDATION_UNIQUE_COMBINATIONS -->
+      <p class="error">
+        Des combinaisons uniques sont nécessaires pour les colonnes : X, Y, Z
+      </p>
+
+      <p>
+        <i>Qu'est-ce que ça veut dire ?</i> Les données dupliquées ont été trouvés, c'est-à-dire seleuement une entrée devrait prèsent pour chaque combinaison des colonnes indiquées dans le message d'erreur, ce que Naomi ne peut pas accepter.
+      </p>
+
+      <p>
+        <i>Comment le réparer:</i>
+        Il faut revoir vos données pour decouvrir les lignes one des entrée dupliquées et puis les corriger ou supprimer.
+      </p>
     </div>
   </body>
 </html>
